@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="description" content="难忘云(NanWangYun) 极简导航页，多搜索入口一键切换。">
+<meta name="keywords" content="难忘云,NanWangYun,导航,搜索">
+<link rel="canonical" href="https://home.nwovo.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='64' height='64' rx='16' fill='%23000'/%3E%3Cpath d='M18 38c-4.5 0-8-3.3-8-7.5 0-3.6 2.7-6.6 6.3-7.3C17.6 18.2 22.8 14 29 14c6.8 0 12.5 5 13.4 11.5 4.2.7 7.6 4 7.6 8 0 4.6-4 8.5-8.8 8.5H18Z' fill='%233b82f6' opacity='.88'/%3E%3Cpath d='M16 43c3.8 3.6 8.7 5.6 14.3 5.6 6.5 0 12-2.5 16-7' stroke='%233b82f6' stroke-width='2.8' fill='none' stroke-linecap='round' opacity='.7'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://ipwho.is" crossorigin>
+<meta property="og:title" content="难忘云 · 导航">
+<meta property="og:description" content="难忘云(NanWangYun) 极简导航页，多搜索入口一键切换。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="难忘云">
+<meta property="og:url" content="https://home.nwovo.com/">
+<meta property="og:image" content="https://home.nwovo.com/logo.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="难忘云 · 导航">
+<meta name="twitter:description" content="难忘云(NanWangYun) 极简导航页，多搜索入口一键切换。">
+<title>难忘云 · 导航</title>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"难忘云","url":"https://home.nwovo.com/","potentialAction":{"@type":"SearchAction","target":"https://home.nwovo.com/?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+:root{--bg:#f7f9ff;--text:#0b1020;--muted:#1f2a44;--muted2:#3c4a66;--muted3:#607195;--glass:rgba(255,255,255,.72);--border:rgba(25,55,110,.14);--border2:rgba(25,55,110,.10);--shadow:rgba(10,20,40,.12);--blue:#3b82f6;--blue2:#2563eb;--jade:#2dd4a0;--jade2:#1a9e7a;--purple:#818cf8;--gold:#fbbf24}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;overflow-y:auto}
+a{color:inherit;text-decoration:none}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(ellipse at 28% 18%,rgba(59,130,246,.14) 0%,transparent 54%),radial-gradient(ellipse at 72% 82%,rgba(37,99,235,.1) 0%,transparent 54%);pointer-events:none;z-index:0}
+body::after{content:"";position:fixed;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.05),rgba(0,0,0,0) 55%),repeating-linear-gradient(90deg,rgba(0,0,0,.04) 0 1px,transparent 1px 90px),repeating-linear-gradient(0deg,rgba(0,0,0,.03) 0 1px,transparent 1px 90px);opacity:.025;pointer-events:none;z-index:0;transform:translateZ(0)}
+.wrap{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:44px 22px 64px;gap:18px}
+.brand{display:flex;align-items:center;gap:14px;margin-bottom:6px;animation:fadeUp .55s both}
+.brand-img{width:56px;height:56px;border-radius:18px;object-fit:cover;outline:1px solid var(--border2);background:var(--glass);box-shadow:0 14px 40px rgba(0,0,0,.12);opacity:.82}
+.brand-title{display:flex;flex-direction:column;gap:2px}
+.brand-title .name{font-size:1.9rem;font-weight:900;letter-spacing:.06em;line-height:1.12;color:var(--blue);text-shadow:0 10px 40px rgba(59,130,246,.12);transition:color .28s}
+.brand-title .sub{font-size:.82rem;color:var(--muted3);letter-spacing:.08em}
+.panel{width:100%;max-width:720px;animation:fadeUp .7s .04s both}
+.label{text-align:center;font-size:.74rem;color:var(--muted2);letter-spacing:.22em;margin-bottom:12px}
+.search{display:flex;align-items:center;gap:10px;border-radius:18px;padding:7px 7px 7px 14px;background:var(--glass);border:1px solid var(--border);box-shadow:0 20px 70px var(--shadow);backdrop-filter:blur(16px);transition:box-shadow .25s,border-color .25s,background-color .28s}
+.search:focus-within{border-color:rgba(45,212,160,.28);box-shadow:0 24px 90px var(--shadow),0 0 0 4px rgba(45,212,160,.06)}
+.chip{width:34px;height:34px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:800;flex:0 0 auto;color:var(--text);box-shadow:0 14px 40px rgba(0,0,0,.25);user-select:none}
+.engine-wrap{position:relative;flex:0 0 auto}
+select.engine{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px;overflow:hidden}
+.engine-btn{display:flex;align-items:center;gap:10px;padding:10px 36px 10px 4px;min-width:150px;background:transparent;border:none;color:var(--text);cursor:pointer;font-family:inherit;font-size:.92rem;font-weight:700;outline:none;border-radius:14px;transition:background-color .2s,color .28s;position:relative}
+.engine-btn:hover{background:rgba(0,0,0,.05)}
+.engine-btn::after{content:"";position:absolute;right:10px;top:50%;width:18px;height:18px;transform:translateY(-50%);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23607095' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") center no-repeat;opacity:.9}
+.engine-menu{position:absolute;left:0;top:calc(100% + 10px);width:320px;max-height:320px;overflow:auto;padding:10px;border-radius:16px;background:rgba(255,255,255,.9);border:1px solid rgba(25,55,110,.14);backdrop-filter:blur(18px);box-shadow:0 30px 90px rgba(10,20,40,.18);display:none;z-index:5}
+.engine-menu.open{display:block}
+.engine-group{padding:6px 8px 8px;color:var(--muted3);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase}
+.engine-item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;border-radius:12px;cursor:pointer;transition:background-color .15s;color:var(--text);font-size:.9rem;font-weight:650}
+.engine-item:hover{background:rgba(0,0,0,.05)}
+.engine-item[aria-selected="true"]{background:rgba(59,130,246,.1)}
+.engine-badge{font-size:.72rem;color:var(--muted3);font-weight:700}
+.q{flex:1;background:transparent;border:none;color:var(--text);font-size:1rem;padding:12px 4px;outline:none;font-family:inherit}
+.q::placeholder{color:var(--muted3)}
+.go{display:flex;align-items:center;gap:6px;border:none;border-radius:12px;padding:10px 22px;cursor:pointer;font-family:inherit;font-size:.9rem;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--jade),var(--jade2));transition:transform .2s,box-shadow .2s;white-space:nowrap}
+.go:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(45,212,160,.28)}
+.go:active{transform:translateY(0)}
+.geo{margin-top:12px;text-align:center;font-size:.82rem;color:var(--muted3);letter-spacing:.02em;min-height:1.3em}
+.geo strong{color:var(--text);font-weight:800}
+.geo .dot{margin:0 10px;opacity:.4}
+.geo .warn{color:rgba(251,191,36,.95);display:block;margin-top:4px}
+.sys{width:100%;max-width:720px;margin-top:4px}
+.sys .title{text-align:center;font-size:.68rem;color:var(--muted3);letter-spacing:.18em;margin-bottom:10px;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:8px}
+.sys-toggle{display:inline-block;font-size:.65rem;letter-spacing:.04em;color:var(--blue);cursor:pointer;text-transform:none;transition:opacity .2s;user-select:none;padding:2px 10px;border-radius:16px;border:1px solid var(--border2);background:var(--glass);line-height:1.6}
+.sys-toggle:hover{opacity:.7}
+.sys-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.kv{border:1px solid var(--border2);background:rgba(0,0,0,.03);border-radius:10px;padding:8px 12px;display:flex;flex-direction:column;gap:3px}
+.k{font-size:.65rem;color:var(--muted3);letter-spacing:.1em;text-transform:uppercase}
+.v{font-size:.8rem;color:var(--text);font-weight:650;word-break:break-word}
+.links{width:100%;max-width:720px;margin-top:8px;animation:fadeUp .8s .08s both}
+.links .title{text-align:center;font-size:.72rem;color:var(--muted3);letter-spacing:.22em;margin-bottom:16px;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.card{display:flex;flex-direction:column;align-items:center;gap:10px;padding:22px 12px;border-radius:14px;border:1px solid var(--border2);background:rgba(0,0,0,.03);transition:transform .2s,box-shadow .2s,border-color .2s;text-align:center}
+.card:hover{transform:translateY(-3px);border-color:rgba(45,212,160,.2);background:rgba(0,0,0,.05);box-shadow:0 16px 50px rgba(45,212,160,.06)}
+.cicon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:800;box-shadow:0 12px 30px rgba(0,0,0,.25);user-select:none}
+.card .cname{font-size:.92rem;font-weight:800;color:var(--text)}
+.card .curl{font-size:.72rem;color:var(--muted3);word-break:break-all;line-height:1.3}
+.ft{position:fixed;bottom:0;left:0;right:0;padding:14px 24px;border-top:1px solid var(--border2);background:var(--bg);z-index:2;display:flex;justify-content:center}
+.ft-inner{display:flex;justify-content:space-between;align-items:center;font-size:.7rem;color:var(--muted3);gap:16px;flex-wrap:wrap;max-width:720px;width:100%}
+.ft-links a{color:var(--muted2);transition:color .2s}
+.ft-links a:hover{color:var(--text)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}.engine-btn{min-width:110px;padding:10px 22px 10px 4px}.engine-menu{width:min(300px,calc(100vw - 44px))}.sys-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.search{gap:4px;padding:5px 5px 5px 8px;flex-wrap:nowrap}.chip{display:none}.engine-btn{display:none}.engine-menu{display:none!important}select.engine{position:static;opacity:1;pointer-events:auto;width:auto;height:auto;overflow:visible;min-width:60px;max-width:90px;font-size:.8rem;color:var(--text);background:transparent;border:none;outline:none;cursor:pointer;font-family:inherit;font-weight:600;padding:4px 0;flex:0 0 auto;-webkit-appearance:auto;appearance:auto}.go{padding:6px 10px;font-size:.78rem;flex-shrink:0;align-self:center}.go svg{display:none}.q{padding:6px 4px;font-size:.88rem;min-width:0}.grid{gap:8px}.card{flex-direction:row;text-align:left;gap:10px;padding:12px 14px}.card .cicon{width:40px;height:40px;font-size:1rem;flex-shrink:0}.card .ctext{display:flex;flex-direction:column;gap:2px;min-width:0}.card .cname{font-size:.88rem}.card .curl{font-size:.68rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
+@media(max-width:420px){.brand-title .name{font-size:1.55rem}.go{padding:8px 12px}}
+</style>
+</head>
+<body>
+<main class="wrap" id="app"></main>
+<noscript>
+  <div style="padding:40px 24px;max-width:720px;margin:0 auto;font-family:system-ui,sans-serif;color:#0b1020">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:30px">
+      <img src="logo.jpg" alt="" style="width:56px;height:56px;border-radius:18px;object-fit:cover;opacity:.82">
+      <div><h1 style="font-size:1.9rem;font-weight:900;color:#3b82f6;margin:0">难忘云 <span style="font-size:.55em;opacity:.55;font-weight:600">NanWangYun</span></h1><p style="color:#607195;font-size:.82rem;margin:2px 0 0">home.nwovo.com</p></div>
+    </div>
+    <nav>
+      <p style="font-size:.82rem;color:#607195;margin-bottom:16px"><strong>官方网站：</strong></p>
+      <ul style="list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px">
+        <li><a href="https://www.nwovo.com" style="color:#3b82f6;text-decoration:none">难忘云</a><br><span style="font-size:.72rem;color:#607195">www.nwovo.com</span></li>
+        <li><a href="https://mpay.zefu.vip" style="color:#3b82f6;text-decoration:none">责付</a><br><span style="font-size:.72rem;color:#607195">mpay.zefu.vip</span></li>
+        <li><a href="https://www.faka.it" style="color:#3b82f6;text-decoration:none">IT发卡</a><br><span style="font-size:.72rem;color:#607195">www.faka.it</span></li>
+        <li><a href="https://dns.nwovo.com" style="color:#3b82f6;text-decoration:none">难忘DNS</a><br><span style="font-size:.72rem;color:#607195">dns.nwovo.com</span></li>
+      </ul>
+      <p style="margin-top:20px;font-size:.72rem;color:#607195">&copy; 2026 难忘云 &middot; 极简导航页，多搜索入口一键切换。</p>
+    </nav>
+  </div>
+</noscript>
+<script src="loader.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>
